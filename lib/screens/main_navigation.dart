@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'favorites_screen.dart';
 import 'home_screen.dart';
 
 class MainNavigation extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MainNavigationState extends State<MainNavigation> {
 
   final pages = [
     const HomeScreen(),
-    const Center(child: Text("Favorites")),
+    const FavoritesScreen(),
     const Center(child: Text("Profile")),
   ];
 

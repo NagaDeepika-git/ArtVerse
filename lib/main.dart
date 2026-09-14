@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'screens/splash_screen.dart';
 import 'utils/app_theme.dart';
+import 'providers/favorites_provider.dart';
 
 void main() {
-  runApp(const ArtVerseApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => FavoritesProvider(),
+      child: const ArtVerseApp(),
+    ),
+  );
 }
 
 class ArtVerseApp extends StatelessWidget {

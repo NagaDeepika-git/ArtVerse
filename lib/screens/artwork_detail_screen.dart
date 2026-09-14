@@ -22,11 +22,14 @@ class ArtworkDetailScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image.network(
-                  imageUrl,
-                  width: double.infinity,
-                  height: 400,
-                  fit: BoxFit.cover,
+                Hero(
+                  tag: imageUrl,
+                  child: Image.network(
+                    imageUrl,
+                    width: double.infinity,
+                    height: 400,
+                    fit: BoxFit.cover,
+                  ),
                 ),
 
                 SafeArea(
@@ -75,7 +78,7 @@ class ArtworkDetailScreen extends StatelessWidget {
 
                   Text(
                     description,
-                    style: const TextStyle(fontSize: 16, height: 1.6),
+                    style: const TextStyle(fontSize: 16, height: 1.7),
                   ),
                 ],
               ),
